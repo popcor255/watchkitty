@@ -1,0 +1,90 @@
+{
+    "apiVersion": "tekton.dev/v1alpha1",
+    "items": [
+        {
+            "apiVersion": "tekton.dev/v1alpha1",
+            "kind": "PipelineResource",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"tekton.dev/v1alpha1\",\"kind\":\"PipelineResource\",\"metadata\":{\"annotations\":{},\"name\":\"skaffold-git-pipelinerun\",\"namespace\":\"tekton-pipelines\"},\"spec\":{\"params\":[{\"name\":\"revision\",\"value\":\"v0.32.0\"},{\"name\":\"url\",\"value\":\"https://github.com/GoogleContainerTools/skaffold\"}],\"type\":\"git\"}}\n"
+                },
+                "creationTimestamp": "2020-01-24T20:55:37Z",
+                "generation": 1,
+                "name": "skaffold-git-pipelinerun",
+                "namespace": "tekton-pipelines",
+                "resourceVersion": "317425",
+                "selfLink": "/apis/tekton.dev/v1alpha1/namespaces/tekton-pipelines/pipelineresources/skaffold-git-pipelinerun",
+                "uid": "ebb1b05b-05b0-4f0f-81ef-01602ce5aeb1"
+            },
+            "spec": {
+                "params": [
+                    {
+                        "name": "revision",
+                        "value": "v0.32.0"
+                    },
+                    {
+                        "name": "url",
+                        "value": "https://github.com/GoogleContainerTools/skaffold"
+                    }
+                ],
+                "type": "git"
+            }
+        },
+        {
+            "apiVersion": "tekton.dev/v1alpha1",
+            "kind": "PipelineResource",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"tekton.dev/v1alpha1\",\"kind\":\"PipelineResource\",\"metadata\":{\"annotations\":{},\"name\":\"skaffold-image-leeroy-app\",\"namespace\":\"tekton-pipelines\"},\"spec\":{\"params\":[{\"name\":\"url\",\"value\":\"gcr.io/christiewilson-catfactory/leeroy-app\"}],\"type\":\"image\"}}\n"
+                },
+                "creationTimestamp": "2020-01-24T20:55:37Z",
+                "generation": 1,
+                "name": "skaffold-image-leeroy-app",
+                "namespace": "tekton-pipelines",
+                "resourceVersion": "317423",
+                "selfLink": "/apis/tekton.dev/v1alpha1/namespaces/tekton-pipelines/pipelineresources/skaffold-image-leeroy-app",
+                "uid": "9a307378-2ef2-4724-a3bc-9fb5f4d0671f"
+            },
+            "spec": {
+                "params": [
+                    {
+                        "name": "url",
+                        "value": "gcr.io/christiewilson-catfactory/leeroy-app"
+                    }
+                ],
+                "type": "image"
+            }
+        },
+        {
+            "apiVersion": "tekton.dev/v1alpha1",
+            "kind": "PipelineResource",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"tekton.dev/v1alpha1\",\"kind\":\"PipelineResource\",\"metadata\":{\"annotations\":{},\"name\":\"skaffold-image-leeroy-web-pipelinerun\",\"namespace\":\"tekton-pipelines\"},\"spec\":{\"params\":[{\"name\":\"url\",\"value\":\"gcr.io/christiewilson-catfactory/leeroy-web\"}],\"type\":\"image\"}}\n"
+                },
+                "creationTimestamp": "2020-01-24T20:55:37Z",
+                "generation": 1,
+                "name": "skaffold-image-leeroy-web-pipelinerun",
+                "namespace": "tekton-pipelines",
+                "resourceVersion": "317424",
+                "selfLink": "/apis/tekton.dev/v1alpha1/namespaces/tekton-pipelines/pipelineresources/skaffold-image-leeroy-web-pipelinerun",
+                "uid": "aa6a5b71-7424-492a-b695-75547e57b723"
+            },
+            "spec": {
+                "params": [
+                    {
+                        "name": "url",
+                        "value": "gcr.io/christiewilson-catfactory/leeroy-web"
+                    }
+                ],
+                "type": "image"
+            }
+        }
+    ],
+    "kind": "PipelineResourceList",
+    "metadata": {
+        "continue": "",
+        "resourceVersion": "321746",
+        "selfLink": "/apis/tekton.dev/v1alpha1/pipelineresources"
+    }
+}
