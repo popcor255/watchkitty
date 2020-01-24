@@ -36,8 +36,4 @@ describe('This is a test for index.js', () => {
 
     });
 
-    test('expect getGitRepos git repos to be extracted from payload', () => {
-
-    });
-
 });
