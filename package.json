@@ -9,7 +9,8 @@
   },
   "scripts": {
     "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
-    "dev": "node src/index.js"
+    "dev": "node src/index.js",
+    "tdd": "jest --watch"
   },
   "dependencies": {
     "dotenv-safe": "^8.2.0",
