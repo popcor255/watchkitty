@@ -1,8 +1,14 @@
+var mock_root_directory = "../../mocks/";
+var src_root_directory = "../../../src/utils/";
+
 describe('Tests for the getGitRepos.js', () => {
-    test('expect getGitRepos to extract array of git repos from payload', () => {
-        let endpoint_response_mock = require('../mocks/pipeline_resources_mocks/resource_with_1_repo.json.js.js.js');
-        let { get_git_repos } = require('../../../src/utils/get_git_repos.js');
-        
-        expect(get_git_repos(endpoint_response_mock)).toBe("get_git_repo");
+    test('expect get_git_repos_array to a repo in an array from a json object', () => {
+        let endpoint_response_mock = require(mock_root_directory + 'pipeline_resources_mocks/resource_with_1_repo.json');
+        let { get_git_repos_as_array } = require(src_root_directory + 'get_git_repos.js');
+        expect(get_git_repos_as_array(endpoint_response_mock)).toEqual(["https://github.com/GoogleContainerTools/skaffold"]);
+    });
+
+    test('expect get_git_repos_map to return a map of git repos with the key being the repo and piplerun being the value', () => {
+        expect(true).toEqual(true);
     });
 })
