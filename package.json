@@ -1,6 +1,6 @@
 {
   "name": "watchkitty",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "license": "MIT",
   "devDependencies": {
@@ -15,7 +15,7 @@
     "prettier": "^1.19.1"
   },
   "scripts": {
-    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "dev": "node src/index.js",
     "tdd": "jest --watch"
   },
