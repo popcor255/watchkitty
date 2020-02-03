@@ -12,7 +12,7 @@ describe('This is a test for index.js', () => {
 			headers: {}
 		};
 
-		request(options, function(error, response) {
+		request(options, (error, response) => {
 			if (error) throw new Error(error);
 			expect(response.statusCode).toBe(200);
 		});
