@@ -1,4 +1,4 @@
-# watchkitty
+# Watchkitty
 
 [![Build Status](https://travis-ci.org/popcor255/watchkitty.svg?branch=master)](https://travis-ci.org/popcor255/watchkitty)
 [![Coverage Status](https://coveralls.io/repos/github/popcor255/watchkitty/badge.svg?branch=master)](https://coveralls.io/github/popcor255/watchkitty?branch=master)
