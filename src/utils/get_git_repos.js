@@ -11,4 +11,30 @@ function get_git_repos_as_array(payload) {
 	return repos;
 }
 
-module.exports = { get_git_repos_as_array };
+function get_pipelinerun_from_resource(payload, type, value) {
+	let pipelinerun = null;
+
+	payload.items.forEach((item) => {
+		if (item.spec.type === type && item.spec.params[1].value === value) {
+			pipelinerun = item.metadata.name;
+		}
+	});
+
+	return pipelinerun;
+}
+
+function map_pipelines_to_repos(git_repos, payload) {
+	const map = {};
+
+	git_repos.forEach((repo) => {
+		map[repo] = get_pipelinerun_from_resource(payload, 'git', repo);
+	});
+
+	return map;
+}
+
+module.exports = {
+	get_git_repos_as_array,
+	map_pipelines_to_repos,
+	get_pipelinerun_from_resource
+};
