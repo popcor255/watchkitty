@@ -17,7 +17,7 @@
 	"scripts": {
 		"coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
 		"dev": "eslint . && node ./src/index.js",
-		"tdd": "jest --watch"
+		"tdd": "jest --watch --coverage"
 	},
 	"dependencies": {
 		"dotenv-safe": "^8.2.0",
