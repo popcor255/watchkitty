@@ -26,7 +26,7 @@ function get_pipelinerun_from_resource(payload, type, value) {
 function map_pipelines_to_repos(git_repos, payload) {
 	const map = {};
 
-	git_repos.map((repo) => {
+	git_repos.forEach((repo) => {
 		map[repo] = get_pipelinerun_from_resource(payload, 'git', repo);
 	});
 
